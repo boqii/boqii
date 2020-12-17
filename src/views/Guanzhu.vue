@@ -58,10 +58,6 @@
   border: 0;
   background: transparent;
 }
-.img_box {
-  /* text-align: center; */
-}
-/* .close{font: normal ;} */
 .img {
   width: 50%;
   border-radius: 50%;
