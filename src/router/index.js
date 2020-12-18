@@ -2,9 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Details from '../views/Details'
-import Test from '../views/Test'
-import Grid from '../views/Grid'
 import Guanzhu from '../views/Guanzhu'
+import ULove from '../views/ULove'
 
 Vue.use(VueRouter)
 
@@ -19,12 +18,8 @@ const routes = [
     component:Guanzhu
   },
   {
-    path:'/grid',
-    component:Grid
-  },
-  {
-    path:'/test',
-    component:Test
+    path:'/ulove',
+    component:ULove
   },
   {
     path:'/details',

@@ -15,7 +15,7 @@
         </div>
         <p class="niname">萌宠治愈师</p>
         <p class="daren">知名萌宠博主</p>
-        <button class="btn">关注</button>
+        <button class="btn" @click="handle">关注</button>
       </div>
         <div class="more">更多</div>
     </div>
@@ -100,3 +100,12 @@
   line-height: 3.4rem;
 }
 </style>
+<script>
+export default {
+  methods: {
+    handle(){
+      
+    }
+  },
+}
+</script>

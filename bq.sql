@@ -169,7 +169,7 @@ INSERT INTO `bq_forum` VALUES(1,5,'跳跳最米粒','img/avatar/5.jpg','暖冬�
 INSERT INTO `bq_forum` VALUES(2,1,'黑色纯牛M奶','img/avatar/1.jpg','嗯，多吃点肉肉、多囤点膘才好过冬呀','<img src="img/forum/4.jpg"><img src="img/forum/5.jpg"><img src="img/forum/6.jpg"><img src="img/forum/7.jpg"><img src="img/forum/8.jpg">',1607601817,81266,'上海市 崇明区',1,23,0,0);
 INSERT INTO `bq_forum` VALUES(3,2,'最爱Kitty','img/avatar/2.jpg','大哥的小剧场：这是什么？待我闻闻 嗯没有味道 咬咬看呢？哼不好吃呢 妈 这个无用的东西我不要 你拿走吧','<img src="img/forum/9.jpg"><img src="img/forum/10.jpg"><img src="img/forum/11.jpg">',1607602364,51482,'上海市 浦东新区',1,41,0,0);
 INSERT INTO `bq_forum` VALUES(4,3,'吃草莓要吐籽','img/avatar/3.jpg','昨晚小区狗友在小区里遛狗时，看到了一只四处晃悠的博美。看身上有剪毛的痕迹，应该是有主人的。她发到了小区宠物群里，但是我们都不认识这只狗，应该是小区外的。大家自发在附近的几个宠物群里问了一圈，都不认识。狗友给小博美拿了点狗粮吃，先收留着。今天再送到了附近宠物医院，医院也帮忙发文，希望尽快找到他的主人。冬天来了，室外气温低，狗狗万一跑丟流浪在外了，生命堪忧，尤其是毛发抗寒能力弱的狗狗。各位主人一定要看管好自己的狗狗呀。','<img src="img/forum/12.jpg"><img src="img/forum/13.jpg"><img src="img/forum/14.jpg">',1607602814,57510,'浙江省 宁波市',1,100,1,1);
-INSERT INTO `bq_forum` VALUES(5,4,'没表有时间','img/avatar/4.jpg','大佬，你明白我的意思吗？ 大佬：我懂 真的是贴心的小猫咪','<img src="img/forum/15.jpg"><img src="img/forum/16.jpg">',1607603157,62038,'河南省 南阳市',2,20,0,1);
+INSERT INTO `bq_forum` VALUES(5,4,'没表有时间','img/avatar/4.jpg','大佬，你明白我的意思吗？ 大佬：我懂 真的是贴心的小猫咪','<img src="img/forum/15.jpg"><img src="img/forum/16.jpg"><img src="img/forum/38.jpg">',1607603157,62038,'河南省 南阳市',2,20,0,1);
 INSERT INTO `bq_forum` VALUES(6,10,'晚安小熊熊','img/avatar/16.jpg','喵...这就是朕的江山！','<img src="img/forum/17.jpg"><img src="img/forum/18.jpg"><img src="img/forum/19.jpg">',1607739164,56912,'广东省 广州市',2,66,0,0);
 INSERT INTO `bq_forum` VALUES(7,8,'Bing真的超级可爱','img/avatar/12.jpg','据说狗狗有木有犯错，只要看它的耳朵就知道了！','<img src="img/forum/20.jpg"><img src="img/forum/21.jpg"><img src="img/forum/22.jpg">',1607739611,34567,'浙江省 杭州市',1,16,0,0);
 INSERT INTO `bq_forum` VALUES(8,6,'Youni姐姐','img/avatar/10.jpg','请最可爱的那位同学举一下手。','<img src="img/forum/23.jpg"><img src="img/forum/24.jpg"><img src="img/forum/25.jpg">',1607739938,64578,'广东省 深圳市',5,99,1,1);
@@ -180,6 +180,7 @@ INSERT INTO `bq_forum` VALUES(10,12,'过期猫罐头','img/avatar/19.jpg','对�
 -- 评论表
 -- -----------------
 CREATE TABLE `bq_commentary` (
+  `cid` INT NOT NULL KEY auto_increment,
   `id` INT NOT NULL comment '帖子id',
   `nickname` VARCHAR(32) NOT NULL comment '昵称',
   `avatar` VARCHAR(32) NULL DEFAULT 'img/avatar/10.jpg' comment '用户头像',
@@ -187,25 +188,25 @@ CREATE TABLE `bq_commentary` (
   `com_time` INT NOT NULL comment '评论时间',
   `com_like` SMALLINT NULL DEFAULT 0 comment '是否被点赞 1-已点赞 0-未点赞'
 );
-INSERT INTO `bq_commentary` VALUES(1,'Youni姐姐','img/avatar/10.jpg','狗子可以玩一下',1607603770,0);
-INSERT INTO `bq_commentary` VALUES(1,'Bing真的超级可爱','img/avatar/12.jpg','被安利啦！谢谢！',1607603908,0);
-INSERT INTO `bq_commentary` VALUES(2,'萌哒宠物君','img/avatar/15.jpg','这个也太萌了我喜欢瓜娃',1607737127,0);
-INSERT INTO `bq_commentary` VALUES(3,'晚安小熊熊','img/avatar/16.jpg','好可爱好可爱',1607737396,1);
-INSERT INTO `bq_commentary` VALUES(4,'克里斯吴','img/avatar/17.jpg','对一定要好好看着自己的狗狗',1607737420,1);
-INSERT INTO `bq_commentary` VALUES(5,'我是个怪物','img/avatar/18.jpg','这表情，好生动啊',1607737550,1);
-INSERT INTO `bq_commentary` VALUES(5,'过期猫罐头','img/avatar/19.jpg','偷猫大队集合',1607737678,1);
-INSERT INTO `bq_commentary` VALUES(6,'黑色纯牛M奶','img/avatar/1.jpg','萌出一脸血！！！',1607739321,1);
-INSERT INTO `bq_commentary` VALUES(6,'最爱Kitty','img/avatar/2.jpg','表情是真的吗',1607739350,1);
-INSERT INTO `bq_commentary` VALUES(7,'吃草莓要吐籽','img/avatar/3.jpg','这狗狗好委屈呀',1607739752,1);
-INSERT INTO `bq_commentary` VALUES(8,'没表有时间','img/avatar/4.jpg','啊啊啊，好阔爱',1607739752,1);
-INSERT INTO `bq_commentary` VALUES(8,'跳跳最米粒','img/avatar/5.jpg','太可愛啦',1607739752,0);
-INSERT INTO `bq_commentary` VALUES(8,'我是个怪物','img/avatar/18.jpg','天啊，你的猫和我的好像！',1607739752,0);
-INSERT INTO `bq_commentary` VALUES(8,'Youni姐姐','img/avatar/10.jpg','越养越胖',1607739752,1);
-INSERT INTO `bq_commentary` VALUES(8,'吃草莓要吐籽','img/avatar/3.jpg','好乖哈哈哈',1607739789,1);
-INSERT INTO `bq_commentary` VALUES(9,'萌哒宠物君','img/avatar/15.jpg','太可爱了吧，猫主子抓拍的太到位了简直是绝了，想要撸猫猫',1607739895,0);
-INSERT INTO `bq_commentary` VALUES(9,'晚安小熊熊','img/avatar/16.jpg','啊哈哈主人抓拍的也是非常的到位了啊，记录猫猫每一个可爱时刻 ',1607739995,1);
-INSERT INTO `bq_commentary` VALUES(9,'过期猫罐头','img/avatar/19.jpg','我不管猫猫就是这个世上最可爱的动物！',1607749752,0);
-INSERT INTO `bq_commentary` VALUES(10,'Bing真的超级可爱','img/avatar/12.jpg','这些画面真的好有爱呀，请珍惜它们陪你的这段时光吧！',1607761857,1);
-INSERT INTO `bq_commentary` VALUES(10,'Youni姐姐','img/avatar/10.jpg','养宠物养着养着已经把宠物当做家人了。',1607761875,1);
-INSERT INTO `bq_commentary` VALUES(10,'我是个怪物','img/avatar/18.jpg','年龄大了看不得这些，越看这些越想哭，眼泪不值钱',1607761887,0);
-INSERT INTO `bq_commentary` VALUES(10,'黑色纯牛M奶','img/avatar/1.jpg','宠物确实能给人带来很多的欢乐和慰藉',1607761897,0);
+INSERT INTO `bq_commentary` VALUES(1,1,'Youni姐姐','img/avatar/10.jpg','狗子可以玩一下',1607603770,0);
+INSERT INTO `bq_commentary` VALUES(2,1,'Bing真的超级可爱','img/avatar/12.jpg','被安利啦！谢谢！',1607603908,0);
+INSERT INTO `bq_commentary` VALUES(3,2,'萌哒宠物君','img/avatar/15.jpg','这个也太萌了我喜欢瓜娃',1607737127,0);
+INSERT INTO `bq_commentary` VALUES(4,3,'晚安小熊熊','img/avatar/16.jpg','好可爱好可爱',1607737396,1);
+INSERT INTO `bq_commentary` VALUES(5,4,'克里斯吴','img/avatar/17.jpg','对一定要好好看着自己的狗狗',1607737420,1);
+INSERT INTO `bq_commentary` VALUES(6,5,'我是个怪物','img/avatar/18.jpg','这表情，好生动啊',1607737550,1);
+INSERT INTO `bq_commentary` VALUES(7,5,'过期猫罐头','img/avatar/19.jpg','偷猫大队集合',1607737678,1);
+INSERT INTO `bq_commentary` VALUES(8,6,'黑色纯牛M奶','img/avatar/1.jpg','萌出一脸血！！！',1607739321,1);
+INSERT INTO `bq_commentary` VALUES(9,6,'最爱Kitty','img/avatar/2.jpg','表情是真的吗',1607739350,1);
+INSERT INTO `bq_commentary` VALUES(10,7,'吃草莓要吐籽','img/avatar/3.jpg','这狗狗好委屈呀',1607739752,1);
+INSERT INTO `bq_commentary` VALUES(11,8,'没表有时间','img/avatar/4.jpg','啊啊啊，好阔爱',1607739752,1);
+INSERT INTO `bq_commentary` VALUES(12,8,'跳跳最米粒','img/avatar/5.jpg','太可愛啦',1607739752,0);
+INSERT INTO `bq_commentary` VALUES(13,8,'我是个怪物','img/avatar/18.jpg','天啊，你的猫和我的好像！',1607739752,0);
+INSERT INTO `bq_commentary` VALUES(14,8,'Youni姐姐','img/avatar/10.jpg','越养越胖',1607739752,1);
+INSERT INTO `bq_commentary` VALUES(15,8,'吃草莓要吐籽','img/avatar/3.jpg','好乖哈哈哈',1607739789,1);
+INSERT INTO `bq_commentary` VALUES(16,9,'萌哒宠物君','img/avatar/15.jpg','太可爱了吧，猫主子抓拍的太到位了简直是绝了，想要撸猫猫',1607739895,0);
+INSERT INTO `bq_commentary` VALUES(17,9,'晚安小熊熊','img/avatar/16.jpg','啊哈哈主人抓拍的也是非常的到位了啊，记录猫猫每一个可爱时刻 ',1607739995,1);
+INSERT INTO `bq_commentary` VALUES(18,9,'过期猫罐头','img/avatar/19.jpg','我不管猫猫就是这个世上最可爱的动物！',1607749752,0);
+INSERT INTO `bq_commentary` VALUES(19,10,'Bing真的超级可爱','img/avatar/12.jpg','这些画面真的好有爱呀，请珍惜它们陪你的这段时光吧！',1607761857,1);
+INSERT INTO `bq_commentary` VALUES(20,10,'Youni姐姐','img/avatar/10.jpg','养宠物养着养着已经把宠物当做家人了。',1607761875,1);
+INSERT INTO `bq_commentary` VALUES(21,10,'我是个怪物','img/avatar/18.jpg','年龄大了看不得这些，越看这些越想哭，眼泪不值钱',1607761887,0);
+INSERT INTO `bq_commentary` VALUES(22,10,'黑色纯牛M奶','img/avatar/1.jpg','宠物确实能给人带来很多的欢乐和慰藉',1607761897,0);
